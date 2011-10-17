@@ -1,6 +1,6 @@
 namespace PhotoX.Domain.Entity
 {
-    public class Template
-    {
+    public class Template : DomainEntity
+    { 
     }
 }
