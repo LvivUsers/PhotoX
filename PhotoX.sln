@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5C9DA943-F584-4E39-A779-215DD5CE8863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain", "PhotoX.Domain\PhotoX.Domain.csproj", "{DEB3DC08-776F-4D09-9915-D106FDAA457A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain", "src\PhotoX.Domain\PhotoX.Domain.csproj", "{DEB3DC08-776F-4D09-9915-D106FDAA457A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
