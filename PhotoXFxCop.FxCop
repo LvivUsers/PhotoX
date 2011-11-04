@@ -5,7 +5,7 @@
   <Stylesheet Apply="False">$(FxCopDir)\Xml\FxCopReport.xsl</Stylesheet>
   <SaveMessages>
    <Project Status="Excluded" NewOnly="False" />
-   <Report Status="None" NewOnly="False" />
+   <Report Status="Active" NewOnly="False" />
   </SaveMessages>
   <ProjectFile Compress="True" DefaultTargetCheck="True" DefaultRuleCheck="True" SaveByRuleGroup="" Deterministic="True" />
   <EnableMultithreadedLoad>True</EnableMultithreadedLoad>
