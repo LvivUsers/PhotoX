@@ -1,0 +1,5 @@
+D:\My Projects\PhotoX\PhotoX.Domain\bin\Debug\PhotoX.Domain.dll
+D:\My Projects\PhotoX\PhotoX.Domain\bin\Debug\PhotoX.Domain.pdb
+D:\My Projects\PhotoX\PhotoX.Domain\obj\Debug\ResolveAssemblyReference.cache
+D:\My Projects\PhotoX\PhotoX.Domain\obj\Debug\PhotoX.Domain.dll
+D:\My Projects\PhotoX\PhotoX.Domain\obj\Debug\PhotoX.Domain.pdb

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project name="GroupsDasboard" default="main">
+	
+	<include buildfile="sandbox.build" if="${file::exists('sandbox.build')}"/>
+
+	<property name="git_exe" value="C:\Program Files (x86)\Git\bin\git.exe" overwrite="false"/>
+	<property name="git_user" value="LvivUsers" overwrite="false"/>
+	<property name="git_token" value="a842d12fd7e9ae493ed62d91b446e855" overwrite="false"/>
+	<property name="git_Repo" value="https://${git_user}@github.com/LvivUsers/PhotoX.git" overwrite="false"/>	
+	<property name="git_branch" value="master" overwrite="false"/>	
+	
+	<property name="build_mode" value="Debug" overwrite="false"/>
+	<property name="MSBuildPath" value="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" overwrite="false"/>
+	<property name="NUnit_Console_exe" value="C:\Program Files (x86)\NUnit 2.5.10\bin\net-2.0\nunit-console.exe" overwrite="false" />
+	
+	<!-- Connection string -->
+	<property name="Provider" value="SQLOLEDB" overwrite="false"/>
+	<property name="DataSource" value="." overwrite="false"/>
+	<property name="InitialCatalog" value="PhotoX" overwrite="false"/>
+	<!--if db credentials are empty integrated security is used-->
+	<property name="sql_user" value="" overwrite="false"/>
+	<property name="sql_password" value="" overwrite="false"/>
+	<property name="connection_string" value="Data Source=${DataSource};Initial Catalog=${InitialCatalog};Integrated Security=True" />	
+
+	<!--Assemblies info properties-->
+	<property name="version_major" value ="1" overwrite="false"/>
+	<property name="version_minor" value ="0" overwrite="false"/>
+	<property name="version_build" value ="0" overwrite="false"/>
+	<property name="svn.revision" value="0" overwrite="false"/>
+	<property name="asm_copyright" value="Copyright (c) 2011, PhotoX." overwrite="false"/>
+	<property name="asm_company" value="PhotoX" overwrite="false"/>
+	
+	<!--MAIN THREAD-->
+	<target name="main">    
+		<!--<call target="git" />-->
+		<!--<call target="autochanges" />-->	
+		<call target="build" />			
+	</target>
+
+	<target name="git" description="Update sources from GitHub" >
+		<exec program="${git_exe}">
+			<arg value="pull" />			
+		</exec>
+	</target>
+		
+	<target name="generate_connstring">
+		<if test="${property::get-value('sql_user') != ''}" >
+			<if test="${property::get-value('sql_password') != ''}" >
+				<property name="connection_string" value="Data Source=${DataSource};Initial Catalog=${InitialCatalog};User ID='${sql_user}';Password='${sql_password}'" />
+			</if>							
+		</if>
+	</target>
+
+	<target name="build" description="Building PhotoX.sln">
+		<exec program="${MSBuildPath}">
+			<arg line="PhotoX.sln" />
+			<arg line="/property:Configuration=${build_mode}" />
+			<arg value="/target:Rebuild" />      
+		</exec>
+	</target>  
+
+</project>
