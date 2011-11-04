@@ -2,8 +2,8 @@
 
 namespace PhotoX.Domain.Entity
 {
-    public class KeyWords : DomainEntity
+    public class Keywords : DomainEntity
     {
-        public IEnumerable<string> KeyWord { get; set; }
+        public IEnumerable<string> Keyword { get; set; }
     }
 }

@@ -30,6 +30,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>PhotoX.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,7 +51,7 @@
     <Compile Include="Entity\Album.cs" />
     <Compile Include="Entity\Contact.cs" />
     <Compile Include="Entity\DomainEntity.cs" />
-    <Compile Include="Entity\KeyWords.cs" />
+    <Compile Include="Entity\Keywords.cs" />
     <Compile Include="Entity\Phone.cs" />
     <Compile Include="Entity\Photo.cs" />
     <Compile Include="Entity\Photographer.cs" />
@@ -53,8 +59,10 @@
     <Compile Include="Entity\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Diagrams\" />
+    <None Include="Diagrams\DomainModel.cd" />
+    <None Include="PhotoX.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,6 +4,6 @@
     {
         public string Summary { get; set; }
         public Template Template { get; set; }
-        public KeyWords KeyWords { get; set; }
+        public Keywords Keywords { get; set; }
     }
 }
