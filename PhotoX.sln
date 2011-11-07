@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain", "src\PhotoX
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2A22DF6E-47A9-446B-BE1B-F59746110789}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Tests", "src\PhotoX.Tests\PhotoX.Tests.csproj", "{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A} = {5C9DA943-F584-4E39-A779-215DD5CE8863}
+		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D} = {2A22DF6E-47A9-446B-BE1B-F59746110789}
 	EndGlobalSection
 EndGlobal

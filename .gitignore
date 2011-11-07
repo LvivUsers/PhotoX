@@ -2,3 +2,5 @@
 /src/PhotoX.Domain/bin
 /src/PhotoX.Domain/obj
 /PhotoX.suo
+/src/PhotoX.Tests/obj
+/src/PhotoX.Tests/bin
