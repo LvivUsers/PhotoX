@@ -6,15 +6,43 @@
 	<property name="build_mode" value="Debug" overwrite="false"/>
 	<property name="MSBuildPath" value="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe" overwrite="false"/>
 	
+	<!-- Connection string -->
+	<property name="Provider" value="SQLOLEDB" overwrite="false"/>
+	<property name="DataSource" value="." overwrite="false"/>
+	<property name="InitialCatalog" value="PhotoX" overwrite="false"/>
+	<!--if db credentials are empty integrated security is used-->
+	<property name="sql_user" value="" overwrite="false"/>
+	<property name="sql_password" value="" overwrite="false"/>
+	<property name="connection_string" value="Data Source=${DataSource};Initial Catalog=${InitialCatalog};Integrated Security=True" />
+	
+	<property name="sqldir" value="db" overwrite="false"/>
+	<property name="autochanges_sql" value="Updates.sql" overwrite="false"/>
+	<property name="output_log" value="db_update_results.log" overwrite="false"/>
+	
 	<!--MAIN THREAD-->
 	<target name="main">    		
+		<call target="generate_connstring" />
+		<call target="autochanges" />
 		<call target="build" />			
 	</target>
 
-	<target name="git" description="Update sources from GitHub" >
-		<exec program="${git_exe}">
-			<arg value="pull" />			
-		</exec>
+	<target name="generate_connstring">
+		<if test="${property::get-value('sql_user') != ''}" >
+			<if test="${property::get-value('sql_password') != ''}" >
+				<property name="connection_string" value="Data Source=${DataSource};Initial Catalog=${InitialCatalog};User ID='${sql_user}';Password='${sql_password}'" />
+			</if>							
+		</if>
+	</target>
+	
+	<target name="autochanges" >
+		<sql connstring="Provider=${Provider};${connection_string};Integrated Security=SSPI"
+			 transaction="true"
+			 delimiter="GO"
+			 delimstyle="Line"
+			 print="true"
+			 source="${sqldir}\${autochanges_sql}"
+			 batch="false"
+			 output="${sqldir}\${output_log}" />
 	</target>
 		
 	<target name="build" description="Building PhotoX.sln">
