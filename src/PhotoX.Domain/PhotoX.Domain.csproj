@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Address.cs" />
-    <Compile Include="Entity\PhotoDuplication.cs" />
     <Compile Include="Entity\Administrator.cs" />
     <Compile Include="Entity\Album.cs" />
     <Compile Include="Entity\Contact.cs" />
