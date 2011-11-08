@@ -3,11 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{5C9DA943-F584-4E39-A779-215DD5CE8863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain", "src\PhotoX.Domain\PhotoX.Domain.csproj", "{DEB3DC08-776F-4D09-9915-D106FDAA457A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain.Entities", "src\PhotoX.Domain.Entities\PhotoX.Domain.Entities.csproj", "{DEB3DC08-776F-4D09-9915-D106FDAA457A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2A22DF6E-47A9-446B-BE1B-F59746110789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Tests", "src\PhotoX.Tests\PhotoX.Tests.csproj", "{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FBB43B18-49C9-4F18-94BC-90E962DCBEB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{891B1FFF-6696-4BE2-BFA3-633A5EDC32FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Data.Interfaces", "src\PhotoX.Data.Interfaces\PhotoX.Data.Interfaces.csproj", "{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Data.AdoImplementation", "src\PhotoX.Data.AdoImplementation\PhotoX.Data.AdoImplementation.csproj", "{FBA0B78F-E230-4468-8D04-5356CB56996C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain.Services", "src\PhotoX.Domain.Services\PhotoX.Domain.Services.csproj", "{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain.Services.Interfaces", "src\PhotoX.Domain.Services.Interfaces\PhotoX.Domain.Services.Interfaces.csproj", "{B7DDF311-1B8E-4D51-8643-B8BF731C1321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Domain.Tests", "src\Tests\PhotoX.Domain.Tests\PhotoX.Domain.Tests.csproj", "{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoX.Data.Tests", "src\Tests\PhotoX.Data.Tests\PhotoX.Data.Tests.csproj", "{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,16 +33,41 @@ Global
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA0B78F-E230-4468-8D04-5356CB56996C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA0B78F-E230-4468-8D04-5356CB56996C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA0B78F-E230-4468-8D04-5356CB56996C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA0B78F-E230-4468-8D04-5356CB56996C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7DDF311-1B8E-4D51-8643-B8BF731C1321}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7DDF311-1B8E-4D51-8643-B8BF731C1321}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7DDF311-1B8E-4D51-8643-B8BF731C1321}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7DDF311-1B8E-4D51-8643-B8BF731C1321}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DEB3DC08-776F-4D09-9915-D106FDAA457A} = {5C9DA943-F584-4E39-A779-215DD5CE8863}
+		{8B7E5BF4-5EFC-44DF-A427-6FB8A6503B16} = {5C9DA943-F584-4E39-A779-215DD5CE8863}
+		{B7DDF311-1B8E-4D51-8643-B8BF731C1321} = {5C9DA943-F584-4E39-A779-215DD5CE8863}
 		{4151A5E2-BF3D-4E8C-AEFE-6560F90F628D} = {2A22DF6E-47A9-446B-BE1B-F59746110789}
+		{83307A24-BD5F-4F1F-98F1-55EA6F47EDB8} = {2A22DF6E-47A9-446B-BE1B-F59746110789}
+		{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B} = {FBB43B18-49C9-4F18-94BC-90E962DCBEB4}
+		{FBA0B78F-E230-4468-8D04-5356CB56996C} = {FBB43B18-49C9-4F18-94BC-90E962DCBEB4}
 	EndGlobalSection
 EndGlobal

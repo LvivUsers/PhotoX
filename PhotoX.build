@@ -21,9 +21,17 @@
 	
 	<!--MAIN THREAD-->
 	<target name="main">    		
-		<call target="generate_connstring" />
+		<!--<call target="copy_config_files" />-->
+		<call target="generate_connstring" />		
 		<call target="autochanges" />
 		<call target="build" />			
+	</target>
+	
+	<target name="copy_config_files">
+		<copy file="Web.config.standard" tofile="CADR.GroupsDashboard.Webs\Web.config" 
+					if="${not file::exists('CADR.GroupsDashboard.Webs\Web.config')}"/>		
+		<copy file="TestsApp.config.standard" tofile="CADR.GroupsDashboard.Tests\App.config"
+					if="${not file::exists('PhotoX.Tests\App.config')}"/>
 	</target>
 
 	<target name="generate_connstring">
