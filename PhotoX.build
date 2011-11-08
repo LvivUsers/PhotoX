@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="GroupsDasboard" default="main">
+<project name="PhotoX" default="main">
 	
 	<include buildfile="sandbox.build" if="${file::exists('sandbox.build')}"/>
 
@@ -21,17 +21,16 @@
 	
 	<!--MAIN THREAD-->
 	<target name="main">    		
-		<!--<call target="copy_config_files" />-->
-		<call target="generate_connstring" />		
+		<call target="copy_config_files" />		
+		<call target="generate_connstring" />
+		<call target="parse_connstrings" />
 		<call target="autochanges" />
 		<call target="build" />			
 	</target>
 	
-	<target name="copy_config_files">
-		<copy file="Web.config.standard" tofile="CADR.GroupsDashboard.Webs\Web.config" 
-					if="${not file::exists('CADR.GroupsDashboard.Webs\Web.config')}"/>		
-		<copy file="TestsApp.config.standard" tofile="CADR.GroupsDashboard.Tests\App.config"
-					if="${not file::exists('PhotoX.Tests\App.config')}"/>
+	<target name="copy_config_files">		
+		<copy file="src\Tests\PhotoX.Data.Tests\DataTestsApp.config.standard" tofile="src\Tests\PhotoX.Data.Tests\App.config"
+					if="${not file::exists('src\Tests\PhotoX.Data.Tests\App.config')}"/>
 	</target>
 
 	<target name="generate_connstring">
@@ -40,6 +39,13 @@
 				<property name="connection_string" value="Data Source=${DataSource};Initial Catalog=${InitialCatalog};User ID='${sql_user}';Password='${sql_password}'" />
 			</if>							
 		</if>
+	</target>
+	
+	<target name="parse_connstrings" >		
+		<xmlpoke
+			file="src\Tests\PhotoX.Data.Tests\App.config"
+			xpath="/configuration/connectionStrings/add[@name = 'PhotoXCon']/@connectionString"
+			value="${connection_string}" />
 	</target>
 	
 	<target name="autochanges" >

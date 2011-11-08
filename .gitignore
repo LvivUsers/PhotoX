@@ -4,3 +4,17 @@
 /PhotoX.suo
 /src/PhotoX.Tests/obj
 /src/PhotoX.Tests/bin
+/src/PhotoX.Data.AdoImplementation/obj
+/src/PhotoX.Data.AdoImplementation/bin
+/src/PhotoX.Data.Interfaces/obj
+/src/PhotoX.Data.Interfaces/bin
+/src/PhotoX.Domain.Entities/obj
+/src/PhotoX.Domain.Entities/bin
+/src/PhotoX.Domain.Services/obj
+/src/PhotoX.Domain.Services/bin
+/src/PhotoX.Domain.Services.Interfaces/obj
+/src/PhotoX.Domain.Services.Interfaces/bin
+/src/Tests/PhotoX.Data.Tests/obj
+/src/Tests/PhotoX.Data.Tests/bin
+/src/Tests/PhotoX.Domain.Tests/obj
+/src/Tests/PhotoX.Domain.Tests/bin

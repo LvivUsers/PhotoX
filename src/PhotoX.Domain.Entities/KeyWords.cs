@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PhotoX.Domain.Entity
+namespace PhotoX.Domain.Entities
 {
     public class Keywords : DomainEntity
     {

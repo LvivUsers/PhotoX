@@ -49,7 +49,9 @@
     <Compile Include="Address.cs" />
     <Compile Include="Administrator.cs" />
     <Compile Include="Album.cs" />
+    <Compile Include="City.cs" />
     <Compile Include="Contact.cs" />
+    <Compile Include="Country.cs" />
     <Compile Include="DomainEntity.cs" />
     <Compile Include="Keywords.cs" />
     <Compile Include="Phone.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Template.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueObject.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

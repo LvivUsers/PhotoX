@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
-
-using PhotoX.Domain.Entity;
+using PhotoX.Domain.Entities;
 
 namespace PhotoX.Tests.Entity
 {

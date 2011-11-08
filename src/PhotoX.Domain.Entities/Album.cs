@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PhotoX.Domain.Entity
+namespace PhotoX.Domain.Entities
 {
     public class Album : DomainEntity
     {
