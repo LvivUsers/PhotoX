@@ -21,7 +21,14 @@
   <IgnoreGeneratedCode>False</IgnoreGeneratedCode>
  </ProjectOptions>
  <Targets>
-  <Target Name="$(ProjectDir)/src/PhotoX.Domain/bin/Debug/PhotoX.Domain.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <AssemblyReferenceDirectories>
+   <Directory>$(ProjectDir)/src/PhotoX.Domain/bin/Debug/</Directory>
+  </AssemblyReferenceDirectories>
+  <Target Name="$(ProjectDir)/src/PhotoX.Data.AdoImplementation/bin/Debug/PhotoX.Data.AdoImplementation.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/src/PhotoX.Data.Interfaces/bin/Debug/PhotoX.Data.Interfaces.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/src/PhotoX.Domain.Entities/bin/Debug/PhotoX.Domain.Entities.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/src/PhotoX.Domain.Services.Interfaces/bin/Debug/PhotoX.Domain.Services.Interfaces.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/src/PhotoX.Domain.Services/bin/Debug/PhotoX.Domain.Services.dll" Analyze="True" AnalyzeAllChildren="True" />
  </Targets>
  <Rules>
   <RuleFiles>
