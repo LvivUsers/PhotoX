@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAlbumDataMapper.cs" />
+    <Compile Include="IDataMapper.cs" />
+    <Compile Include="IPhotoDataMapper.cs" />
+    <Compile Include="IPhotographerDataMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

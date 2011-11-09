@@ -37,10 +37,8 @@
     <AssemblyOriginatorKeyFile>PhotoX.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Dapper">
-      <HintPath>..\..\lib\dapper\Dapper.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumDataMapper.cs" />
+    <Compile Include="Dapper\SqlMapper.cs" />
+    <Compile Include="DataMapperBase.cs" />
+    <Compile Include="PhotoDataMapper.cs" />
+    <Compile Include="PhotographerDataMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

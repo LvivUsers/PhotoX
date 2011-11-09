@@ -39,7 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Moq">
-      <HintPath>..\..\..\..\lib\moq\Moq.dll</HintPath>
+      <HintPath>..\..\..\lib\moq\Moq.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\lib\nunit\nunit.framework.dll</HintPath>
@@ -53,9 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumDataMapperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\PhotoX.Data.AdoImplementation\PhotoX.Data.AdoImplementation.csproj">
+      <Project>{FBA0B78F-E230-4468-8D04-5356CB56996C}</Project>
+      <Name>PhotoX.Data.AdoImplementation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PhotoX.Data.Interfaces\PhotoX.Data.Interfaces.csproj">
       <Project>{BB31F8EC-C845-4AB3-AD8F-6057C10A5B9B}</Project>
       <Name>PhotoX.Data.Interfaces</Name>
