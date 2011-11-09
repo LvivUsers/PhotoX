@@ -46,21 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="Administrator.cs" />
-    <Compile Include="Album.cs" />
-    <Compile Include="City.cs" />
-    <Compile Include="Contact.cs" />
-    <Compile Include="Country.cs" />
+    <Compile Include="Contacts\Country.cs" />
+    <Compile Include="Contacts\Email.cs" />
+    <Compile Include="Contacts\Location.cs" />
+    <Compile Include="Contacts\Phone.cs" />
+    <Compile Include="User\Administrator.cs" />
+    <Compile Include="Photo\Album.cs" />
+    <Compile Include="Contacts\Contact.cs" />
     <Compile Include="DomainEntity.cs" />
-    <Compile Include="Keywords.cs" />
-    <Compile Include="Phone.cs" />
-    <Compile Include="Photo.cs" />
-    <Compile Include="Photographer.cs" />
-    <Compile Include="Template.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="User\Keywords.cs" />
+    <Compile Include="Photo\Photo.cs" />
+    <Compile Include="User\Avatar.cs" />
+    <Compile Include="User\ContactUser.cs" />
+    <Compile Include="User\Photographer.cs" />
+    <Compile Include="User\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueObject.cs" />
+    <Compile Include="User\Viewer.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
