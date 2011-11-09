@@ -24,7 +24,17 @@
   <AssemblyReferenceDirectories>
    <Directory>$(ProjectDir)/src/PhotoX.Domain/bin/Debug/</Directory>
   </AssemblyReferenceDirectories>
-  <Target Name="$(ProjectDir)/src/PhotoX.Data.AdoImplementation/bin/Debug/PhotoX.Data.AdoImplementation.dll" Analyze="True" AnalyzeAllChildren="True" />
+  <Target Name="$(ProjectDir)/src/PhotoX.Data.AdoImplementation/bin/Debug/PhotoX.Data.AdoImplementation.dll" Analyze="True" AnalyzeAllChildren="False">
+   <Modules AnalyzeAllChildren="False">
+    <Module Name="photox.data.adoimplementation.dll" Analyze="True" AnalyzeAllChildren="False">
+     <Namespaces AnalyzeAllChildren="False">
+      <Namespace Name="" Analyze="True" AnalyzeAllChildren="True" />
+      <Namespace Name="PhotoX.Data.AdoImplementation" Analyze="True" AnalyzeAllChildren="True" />
+     </Namespaces>
+     <Resources AnalyzeAllChildren="True" />
+    </Module>
+   </Modules>
+  </Target>
   <Target Name="$(ProjectDir)/src/PhotoX.Data.Interfaces/bin/Debug/PhotoX.Data.Interfaces.dll" Analyze="True" AnalyzeAllChildren="True" />
   <Target Name="$(ProjectDir)/src/PhotoX.Domain.Entities/bin/Debug/PhotoX.Domain.Entities.dll" Analyze="True" AnalyzeAllChildren="True" />
   <Target Name="$(ProjectDir)/src/PhotoX.Domain.Services.Interfaces/bin/Debug/PhotoX.Domain.Services.Interfaces.dll" Analyze="True" AnalyzeAllChildren="True" />
