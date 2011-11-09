@@ -1,80 +1,108 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="PhotoX.Domain.Entity.Address" Collapsed="true">
-    <Position X="1.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Address.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PhotoX.Domain.Entity.Administrator" Collapsed="true">
-    <Position X="14.75" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Administrator.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PhotoX.Domain.Entity.Album" Collapsed="true">
-    <Position X="8" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgACAAAAAAAAQAAAAAAAABAAAAAAAAAAA=</HashCode>
-      <FileName>Album.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PhotoX.Domain.Entity.Contact" Collapsed="true">
-    <Position X="17" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
-      <FileName>Contact.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="PhotoX.Domain.Entity.DomainEntity" Collapsed="true">
+  <Class Name="PhotoX.Domain.Entities.DomainEntity" Collapsed="true">
     <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DomainEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.Keywords" Collapsed="true">
-    <Position X="3.5" Y="1.75" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Contact">
+    <Position X="7.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
-      <FileName>Keywords.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Contacts\Contact.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.Phone" Collapsed="true">
-    <Position X="10.25" Y="1.75" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Country" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Email" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\Email.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Location" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contacts\Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Phone" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Phone.cs</FileName>
+      <FileName>Contacts\Phone.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.Photo" Collapsed="true">
-    <Position X="19.25" Y="1.75" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Album" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAABABAAAAAAAAAAA=</HashCode>
-      <FileName>Photo.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Photo\Album.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.Photographer" Collapsed="true">
-    <Position X="12.5" Y="3.25" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Photo" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>Photographer.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAABABAAAACAAAAAA=</HashCode>
+      <FileName>Photo\Photo.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.Template" Collapsed="true">
-    <Position X="5.75" Y="1.75" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Administrator" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Template.cs</FileName>
+      <FileName>User\Administrator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entity.User" Collapsed="true">
-    <Position X="13.75" Y="1.75" Width="1.5" />
+  <Class Name="PhotoX.Domain.Entities.Avatar" Collapsed="true">
+    <Position X="15.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAACAACAAQAAAAAAAQAAACAAAAAAAAAAg=</HashCode>
-      <FileName>User.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>User\Avatar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.ContactUser" Collapsed="true">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User\ContactUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Keywords" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>User\Keywords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Photographer" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>User\Photographer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.User" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAgAAAAAAAAQAAAAAAAQAAACAAAQAAAAAAg=</HashCode>
+      <FileName>User\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PhotoX.Domain.Entities.Viewer" Collapsed="true">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User\Viewer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

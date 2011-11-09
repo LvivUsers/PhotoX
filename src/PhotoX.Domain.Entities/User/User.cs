@@ -2,7 +2,7 @@
 
 namespace PhotoX.Domain.Entities
 {
-    public class User : DomainEntity
+    public abstract class User : DomainEntity
     {
         public string Login { get; set; }
         public string Password { get; set; }
