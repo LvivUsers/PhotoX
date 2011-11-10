@@ -8,7 +8,7 @@ using Dapper;
 
 namespace PhotoX.Data.AdoImplementation
 {
-    class PhotographerDataMapper : IPhotographerDataMapper
+    public class PhotographerDataMapper : IPhotographerDataMapper
     {
         public IEnumerable<Photographer> GetAll()
         {

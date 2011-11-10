@@ -1,43 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
+
 using PhotoX.Data.Interfaces;
 using PhotoX.Domain.Entities;
 using Dapper;
 
 namespace PhotoX.Data.AdoImplementation
 {
-    public class AlbumDataMapper : IAlbumDataMapper
+    public class AlbumDataMapper : DataMapperBase, IAlbumDataMapper
     {
+        public AlbumDataMapper(string connectionString) : base(connectionString) { }
+
         public IEnumerable<Album> GetAll()
         {
-            using (var connection = GetConnection())
-            {
-                connection.Open();
-                return connection.Query<Album>("select * from Album");
-            }
+            return Query<Album>("select * from Album");
         }
 
         public Album GetBy(int id)
         {
-            using (var connection = GetConnection())
-            {
-                connection.Open();
-                return connection.Query<Album>("select * from Album where Id = @id", new {Id = id}).SingleOrDefault();
-            }
+            return Query<Album>("select * from Album where Id = @id", new {Id = id}).SingleOrDefault();
+        }
+
+        private bool Exists(int id)
+        {
+            return GetBy(id) != null;
         }
 
         public int Save(Album entity)
         {
-            throw new NotImplementedException();
+            using (var connection = CreateConnection())
+            {
+                connection.Open();
+                int savedId = entity.Id;
+                if(Exists(entity.Id))
+                {
+                    connection.Execute("update Album set Name=@Name, Description=@Description, PhotographerId=@PhotographerId where Id=@Id", entity);
+                }
+                else
+                {
+                    savedId = Convert.ToInt32(connection.Query<decimal>("insert into Album (Name,Description,PhotographerId,DateCreated) values (@Name,@Description,@PhotographerId,GETDATE()); select SCOPE_IDENTITY()", entity).SingleOrDefault());
+                }
+                return savedId;
+            }
         }
-
-        private IDbConnection GetConnection()
-        {
-            return new SqlConnection(ConfigurationManager.ConnectionStrings["PhotoXCon"].ConnectionString);
-        }
-    }
+    }    
 }

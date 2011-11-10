@@ -24,6 +24,7 @@ namespace PhotoX.Data.AdoImplementation
         {
             using (var connection = CreateConnection())
             {
+                connection.Open();
                 return connection.Query<T>(sql, (object)param);
             }
         }
