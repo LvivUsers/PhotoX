@@ -4,6 +4,7 @@ using System.Linq;
 
 using PhotoX.Data.Interfaces;
 using PhotoX.Domain.Entities;
+
 using Dapper;
 
 namespace PhotoX.Data.AdoImplementation
