@@ -73,6 +73,37 @@ namespace PhotoX.Data.Tests
             Assert.AreEqual(newId, 2000001);
         }
 
+        [Test]
+        public void Save_InsertReadUpdateFlow_WorksCorrectly()
+        {
+            var album = new Album
+            {                
+                Description = "My album description",
+                Name = "My album name",
+                PhotographerId = 1000001
+            };
+            //insert album
+            var newId = mapper.Save(album);
+            var insertedAlbum = mapper.GetBy(newId);
+            var dateCreated = insertedAlbum.DateCreated;
+            Assert.AreEqual("My album description", insertedAlbum.Description);
+            Assert.AreEqual("My album name", insertedAlbum.Name);
+            Assert.AreEqual(1000001, insertedAlbum.PhotographerId);
+            Assert.AreEqual(newId, insertedAlbum.Id);
+
+            //update album
+            insertedAlbum.Description = "Updated description";
+            insertedAlbum.Name = "Updated name";
+
+            var insertedId = mapper.Save(insertedAlbum);
+            var updatedAlbum = mapper.GetBy(insertedId);
+            Assert.AreEqual("Updated description", updatedAlbum.Description);
+            Assert.AreEqual("Updated name", updatedAlbum.Name);
+            Assert.AreEqual(1000001, updatedAlbum.PhotographerId);
+            Assert.AreEqual(insertedId, updatedAlbum.Id);
+            Assert.AreEqual(dateCreated, updatedAlbum.DateCreated);
+        }
+
         [TestFixtureTearDown]
         public override void Clear()
         {
