@@ -1,26 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
+using Dapper;
 
 using PhotoX.Data.Interfaces;
 using PhotoX.Domain.Entities;
 
 namespace PhotoX.Data.AdoImplementation
 {
-    public class PhotoDataMapper : IPhotoDataMapper
+    public class PhotoDataMapper : DataMapperBase<Photo>, IPhotoDataMapper
     {
-        public IEnumerable<Photo> GetAll()
+        public PhotoDataMapper(string connectionString) : base(connectionString) { }
+
+        public override IEnumerable<Photo> GetAll()
         {
-            throw new NotImplementedException();
+            return Query("select * from Photo");
         }
 
-        public Photo GetBy(int id)
+        public override Photo GetBy(int id)
         {
-            throw new NotImplementedException();
+            return Query("select * from Photo where Id = @Id", new {Id = id}).SingleOrDefault();
         }
 
-        public int Save(Photo entity)
+        protected override int Insert(Photo entity, IDbConnection connection)
         {
-            throw new NotImplementedException();
+            return Convert.ToInt32(connection.Query<decimal>("insert into Photo (AlbumId,Name,Description,DateCreated,Image) values (@AlbumId,@Name,@Description,GETDATE(),@Image); select SCOPE_IDENTITY()", entity).SingleOrDefault());
+        }
+
+        protected override void Update(Photo entity, IDbConnection connection)
+        {
+            connection.Execute("update Photo set AlbumId=@AlbumId, Name=@Name, Description=@Description, Image=@Image where Id=@Id", entity);
         }
     }
 }

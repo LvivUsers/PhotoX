@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="AlbumDataMapperTest.cs" />
     <Compile Include="BaseTest.cs" />
+    <Compile Include="PhotoDataMapperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +75,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="sql\TestSetup.sql">
