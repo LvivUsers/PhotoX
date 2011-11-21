@@ -21,13 +21,6 @@
       <FileName>Contacts\Country.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entities.Email" Collapsed="true">
-    <Position X="7.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
-      <FileName>Contacts\Email.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PhotoX.Domain.Entities.Location" Collapsed="true">
     <Position X="7.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
@@ -35,24 +28,17 @@
       <FileName>Contacts\Location.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PhotoX.Domain.Entities.Phone" Collapsed="true">
-    <Position X="7.5" Y="5.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Contacts\Phone.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="PhotoX.Domain.Entities.Album" Collapsed="true">
     <Position X="9.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAABAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>Photo\Album.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PhotoX.Domain.Entities.Photo" Collapsed="true">
     <Position X="13.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAABABAAAACAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAgAAAABAAAAAEAAAAAAA=</HashCode>
       <FileName>Photo\Photo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -87,7 +73,7 @@
   <Class Name="PhotoX.Domain.Entities.Photographer" Collapsed="true">
     <Position X="11.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>User\Photographer.cs</FileName>
     </TypeIdentifier>
   </Class>

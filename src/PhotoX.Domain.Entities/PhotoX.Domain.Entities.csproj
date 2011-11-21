@@ -47,9 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contacts\Country.cs" />
-    <Compile Include="Contacts\Email.cs" />
     <Compile Include="Contacts\Location.cs" />
-    <Compile Include="Contacts\Phone.cs" />
     <Compile Include="User\Administrator.cs" />
     <Compile Include="Photo\Album.cs" />
     <Compile Include="Contacts\Contact.cs" />

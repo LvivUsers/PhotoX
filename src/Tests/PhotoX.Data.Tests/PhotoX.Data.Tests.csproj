@@ -58,6 +58,7 @@
     <Compile Include="AlbumDataMapperTest.cs" />
     <Compile Include="BaseTest.cs" />
     <Compile Include="PhotoDataMapperTest.cs" />
+    <Compile Include="PhotographerDataMapperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

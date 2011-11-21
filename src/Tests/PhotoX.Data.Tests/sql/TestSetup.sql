@@ -4,9 +4,9 @@ INSERT [dbo].[Country] ([Id], [Name]) VALUES (2000, N'USA')
 SET IDENTITY_INSERT [dbo].[Country] OFF
 
 SET IDENTITY_INSERT [dbo].[User] ON
-INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate]) VALUES (1000000, N'Petro', N'Sidlovskyy', N'Petrovych', CAST(0xF60C0B00 AS Date), N'pass1', CAST(0x00007B1F00F4E2C4 AS DateTime))
-INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate]) VALUES (1000001, N'Ivan', N'Photograph', N'MidPhotograph', CAST(0xE4F10A00 AS Date), N'pass2', CAST(0x00008A9500E399DF AS DateTime))
-INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate]) VALUES (1000002, N'Oleh', N'Viewer', N'MidViewer', CAST(0x5E280B00 AS Date), N'pass3', CAST(0x000063C6002C4078 AS DateTime))
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate], [Login]) VALUES (1000000, N'Petro', N'Sidlovskyy', N'Petrovych', CAST(0xF60C0B00 AS Date), N'pass1', CAST(0x00007B1F00F4E2C4 AS DateTime), N'Petro_Login')
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate], [Login]) VALUES (1000001, N'Ivan', N'Photograph', N'MidPhotograph', CAST(0xE4F10A00 AS Date), N'pass2', CAST(0x00008A9500E399DF AS DateTime), N'Ivan_Login')
+INSERT [dbo].[User] ([Id], [FirstName], [LastName], [MiddleName], [DateOfBirth], [Password], [LastLoginDate], [Login]) VALUES (1000002, N'Oleh', N'Viewer', N'MidViewer', CAST(0x5E280B00 AS Date), N'pass3', CAST(0x000063C6002C4078 AS DateTime), N'oleh_Login')
 SET IDENTITY_INSERT [dbo].[User] OFF
 
 INSERT [dbo].[Photographer] ([UserId], [Summary], [Keywords], [Phone], [Email], [City], [CountryId]) VALUES (1000001, N'I am very good photographer', N'photo; wedding; children', N'0603570479', N'photo.test@mail.net', N'Lviv', 1000)

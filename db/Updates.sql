@@ -11,6 +11,12 @@ END
 SELECT @version = [Version] FROM [System]
 
 --update code should be here
+IF(@version = 0)
+BEGIN
+	ALTER TABLE [User] ADD [Login] nvarchar(20) NOT NULL
+	
+	SET @version = @version + 1
+END
 
 DECLARE @oldversion int;
 SELECT @oldversion = [Version] FROM [System]

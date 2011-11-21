@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 using NUnit.Framework;
+
 using PhotoX.Data.AdoImplementation;
 using PhotoX.Data.Interfaces;
 using PhotoX.Domain.Entities;
