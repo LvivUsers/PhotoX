@@ -24,14 +24,14 @@ namespace PhotoX.Data.AdoImplementation
             return Query("select * from Album where Id = @id", new {Id = id}).SingleOrDefault();
         }
 
-        protected override int Insert(Album entity, IDbConnection connection)
+        protected override int Insert(Album album, IDbConnection connection)
         {
-            return Convert.ToInt32(connection.Query<decimal>("insert into Album (Name,Description,PhotographerId,DateCreated) values (@Name,@Description,@PhotographerId,GETDATE()); select SCOPE_IDENTITY()", entity).SingleOrDefault());
+            return Convert.ToInt32(connection.Query<decimal>("insert into Album (Name,Description,PhotographerId,DateCreated) values (@Name,@Description,@PhotographerId,GETDATE()); select SCOPE_IDENTITY()", album).SingleOrDefault());
         }
 
-        protected override void Update(Album entity, IDbConnection connection)
+        protected override void Update(Album album, IDbConnection connection)
         {
-            connection.Execute("update Album set Name=@Name, Description=@Description, PhotographerId=@PhotographerId where Id=@Id", entity);
+            connection.Execute("update Album set Name=@Name, Description=@Description, PhotographerId=@PhotographerId where Id=@Id", album);
         }
     }
 }

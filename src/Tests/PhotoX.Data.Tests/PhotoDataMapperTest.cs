@@ -25,31 +25,28 @@ namespace PhotoX.Data.Tests
         public void GetAll_ReturnsSomedata()
         {
             var photos = mapper.GetAll();
+            Assert.NotNull(photos);
             Assert.GreaterOrEqual(photos.Count(), 3);
-        }
+            var photo = photos.Where(p => p.Id == 3000000).SingleOrDefault();
+            VerifyPhoto(photo);
+        }        
 
         [Test]
-        public void GetById_ExistingAlbum_ReturnsCorrectData()
+        public void GetById_ExistingPhoto_ReturnsCorrectData()
         {
             var photo = mapper.GetBy(id: 3000000);
-            Assert.NotNull(photo);
-            Assert.AreEqual(3000000, photo.Id);
-            Assert.AreEqual("Me1", photo.Name);
-            Assert.AreEqual("This is me 1", photo.Description);
-            Assert.AreEqual(2000000, photo.AlbumId);
-            Assert.NotNull(photo.Image);
-            Assert.AreNotEqual(default(DateTime), photo.DateCreated);
+            VerifyPhoto(photo);
         }
 
         [Test]
-        public void GetById_NotExistingAlbum_ReturnsNull()
+        public void GetById_NotExistingPhoto_ReturnsNull()
         {
             var photo = mapper.GetBy(id: 2999999);
             Assert.Null(photo);
         }
 
         [Test]
-        public void Save_NewAlbum_ReturnNewId()
+        public void Save_NewPhoto_ReturnNewId()
         {
             var photo = new Photo
             {
@@ -63,7 +60,7 @@ namespace PhotoX.Data.Tests
         }
 
         [Test]
-        public void Save_ExistingAlbum_ReturnTheExistingId()
+        public void Save_ExistingPhoto_ReturnTheExistingId()
         {
             var photo = new Photo
             {
@@ -74,7 +71,7 @@ namespace PhotoX.Data.Tests
                 Image = new byte[] { 1, 2, 3 }
             };
             var newId = mapper.Save(photo);
-            Assert.AreEqual(newId, 3000001);
+            Assert.AreEqual(3000001, newId);
         }
 
         [Test]
@@ -109,6 +106,17 @@ namespace PhotoX.Data.Tests
             Assert.AreEqual(insertedId, updatedPhoto.Id);
             Assert.AreEqual(dateCreated, updatedPhoto.DateCreated);
             Assert.IsTrue(updatedPhoto.Image.SequenceEqual(new byte[] { 3, 6, 7 }));
+        }
+
+        private void VerifyPhoto(Photo photo)
+        {
+            Assert.NotNull(photo);
+            Assert.AreEqual(3000000, photo.Id);
+            Assert.AreEqual("Me1", photo.Name);
+            Assert.AreEqual("This is me 1", photo.Description);
+            Assert.AreEqual(2000000, photo.AlbumId);
+            Assert.NotNull(photo.Image);
+            Assert.AreNotEqual(default(DateTime), photo.DateCreated);
         }
 
         [TestFixtureTearDown]

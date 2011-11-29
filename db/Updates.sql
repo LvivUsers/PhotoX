@@ -18,6 +18,14 @@ BEGIN
 	SET @version = @version + 1
 END
 
+--change phone type to nvarchar
+IF(@version = 1)
+BEGIN
+	ALTER TABLE Photographer ALTER COLUMN Phone nvarchar(12) NOT NULL
+
+	SET @version = @version + 1
+END
+
 DECLARE @oldversion int;
 SELECT @oldversion = [Version] FROM [System]
 

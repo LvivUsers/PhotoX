@@ -25,18 +25,17 @@ namespace PhotoX.Data.Tests
         public void GetAll_ReturnsSomedata()
         {
             var albums = mapper.GetAll();
+            Assert.NotNull(albums);
             Assert.GreaterOrEqual(albums.Count(), 2);
-        }
+            var album = albums.Where(a => a.Id == 2000000).SingleOrDefault();
+            VerifyAlbum(album);
+        }        
 
         [Test]
         public void GetById_ExistingAlbum_ReturnsCorrectData()
         {
             var album = mapper.GetBy(id: 2000000);
-            Assert.NotNull(album);
-            Assert.AreEqual(2000000, album.Id);
-            Assert.AreEqual("My photos", album.Name);
-            Assert.AreEqual("These are my photos", album.Description);
-            Assert.AreNotEqual(default(DateTime), album.DateCreated);
+            VerifyAlbum(album);
         }
 
         [Test]
@@ -70,7 +69,7 @@ namespace PhotoX.Data.Tests
                 PhotographerId = 1000001
             };
             var newId = mapper.Save(album);
-            Assert.AreEqual(newId, 2000001);
+            Assert.AreEqual(2000001, newId);
         }
 
         [Test]
@@ -102,6 +101,15 @@ namespace PhotoX.Data.Tests
             Assert.AreEqual(1000001, updatedAlbum.PhotographerId);
             Assert.AreEqual(insertedId, updatedAlbum.Id);
             Assert.AreEqual(dateCreated, updatedAlbum.DateCreated);
+        }
+
+        private void VerifyAlbum(Album album)
+        {
+            Assert.NotNull(album);
+            Assert.AreEqual(2000000, album.Id);
+            Assert.AreEqual("My photos", album.Name);
+            Assert.AreEqual("These are my photos", album.Description);
+            Assert.AreNotEqual(default(DateTime), album.DateCreated);
         }
 
         [TestFixtureTearDown]
